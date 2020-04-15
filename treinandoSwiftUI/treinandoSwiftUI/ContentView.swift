@@ -28,7 +28,7 @@ struct ContentView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 20)
                 }
-                .frame(width: view.size.width, height: 200, alignment: .top)
+                .frame(width: view.size.width, height: 190, alignment: .top)
                 .background(Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)))
 
                 HStack {
@@ -56,11 +56,8 @@ struct ContentView: View {
                 }
                 .offset(y: -25)
 
-                List {
-                    Text("São Paulo")
-                    Text("Rio de Janeiro")
-                    Text("Maragogi")
-                    Text("Ceará")
+                List(viagens) { viagem in
+                    Text(viagem.titulo)
                 }
             }
             .edgesIgnoringSafeArea(.all)
