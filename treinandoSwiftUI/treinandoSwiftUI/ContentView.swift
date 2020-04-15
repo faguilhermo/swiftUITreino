@@ -28,7 +28,7 @@ struct ContentView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 20)
                 }
-                .frame(width: view.size.width, height: 180, alignment: .top)
+                .frame(width: view.size.width, height: 200, alignment: .top)
                 .background(Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)))
 
                 HStack {
@@ -38,7 +38,11 @@ struct ContentView: View {
                             .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                     }
                     .frame(width: 100, height: 50)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.2113958895, green: 0.03864551708, blue: 0.5749527812, alpha: 1)), lineWidth: 10))
                     .background(Color(#colorLiteral(red: 0.2113958895, green: 0.03864551708, blue: 0.5749527812, alpha: 1)))
+                    .offset(x: 50)
+
+                    Spacer()
 
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                         Text("Pacotes")
@@ -46,8 +50,11 @@ struct ContentView: View {
                             .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                     }
                     .frame(width: 100, height: 50)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.2113958895, green: 0.03864551708, blue: 0.5749527812, alpha: 1)), lineWidth: 10))
                     .background(Color(#colorLiteral(red: 0.2113958895, green: 0.03864551708, blue: 0.5749527812, alpha: 1)))
+                    .offset(x: -50)
                 }
+                .offset(y: -25)
 
                 List {
                     Text("São Paulo")
