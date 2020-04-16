@@ -13,16 +13,20 @@ struct ContentView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
     var body: some View {
-        GeometryReader { view in
-            VStack {
-                HeaderView().frame(width: view.size.width, height: self.horizontalSizeClass == .compact ? 180 : 280, alignment: .top)
-                List(viagens) { viagem in
-                    CustomCell(viagem: viagem)
+        NavigationView {
+            GeometryReader { view in
+                VStack {
+                    HeaderView().frame(width: view.size.width, height: self.horizontalSizeClass == .compact ? 180 : 280, alignment: .top)
+                    List(viagens) { viagem in
+                        NavigationLink(destination: MapView(coordinate: viagem.localizacao).navigationBarTitle(viagem.titulo)) {
+                            CustomCell(viagem: viagem)
+                        }
+                    }
                 }
+                .edgesIgnoringSafeArea(.all)
             }
-            .edgesIgnoringSafeArea(.all)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
-
     }
 }
 
