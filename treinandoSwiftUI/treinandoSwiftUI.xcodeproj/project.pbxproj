@@ -70,7 +70,6 @@
 				0C82E16324478130003A1C14 /* SceneDelegate.swift */,
 				0C82E17D2447AB6F003A1C14 /* Models */,
 				0C82E17E2447B059003A1C14 /* Views */,
-				0C82E16524478130003A1C14 /* ContentView.swift */,
 				0C82E1752447AB27003A1C14 /* viagens.json */,
 				0C82E16724478135003A1C14 /* Assets.xcassets */,
 				0C82E16C24478135003A1C14 /* LaunchScreen.storyboard */,
@@ -100,6 +99,7 @@
 		0C82E17E2447B059003A1C14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C82E16524478130003A1C14 /* ContentView.swift */,
 				0C82E17F2447B085003A1C14 /* HeaderView.swift */,
 				0C82E1812447B328003A1C14 /* CustomCell.swift */,
 			);

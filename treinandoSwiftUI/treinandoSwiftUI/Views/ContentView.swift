@@ -9,10 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+
     var body: some View {
         GeometryReader { view in
             VStack {
-                HeaderView().frame(width: view.size.width, height: 220, alignment: .top)
+                HeaderView().frame(width: view.size.width, height: self.horizontalSizeClass == .compact ? 180 : 280, alignment: .top)
                 List(viagens) { viagem in
                     CustomCell(viagem: viagem)
                 }
