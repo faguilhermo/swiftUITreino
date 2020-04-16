@@ -19,7 +19,7 @@ struct HeaderView: View {
                     Text("viagens")
                         .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                         .font(.custom("Avenir Black", size: self.horizontalSizeClass == .compact ? 20 : 30))
-                        .padding(.top, 60)
+                        .padding(.top, self.horizontalSizeClass == .compact ? 60 : 80)
                     Text("ESPECIAL")
                         .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                         .font(.custom("Avenir Book", size: self.horizontalSizeClass == .compact ? 20 : 30))
@@ -60,7 +60,7 @@ struct HeaderView: View {
 
                     Spacer()
                 }
-                .offset(y: -25)
+                .offset(y: self.horizontalSizeClass == .compact ? -25 : -37.5)
             }
         }
     }
